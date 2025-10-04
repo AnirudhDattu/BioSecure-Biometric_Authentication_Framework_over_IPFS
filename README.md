@@ -439,14 +439,6 @@ git fetch upstream
 git merge upstream/main
 ```
 
-## 📄 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
-### MIT License Summary
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files, to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software.
-
 ## 🙏 Acknowledgements
 
 ### Libraries and Frameworks
@@ -463,67 +455,7 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 - **IPFS Protocol** - For pioneering decentralized storage solutions
 - **Biometric Authentication Research** - For advancing secure identity verification
 
-### Special Thanks
 
-- The open-source community for continuous support and contributions
-- Security researchers for promoting best practices in biometric data handling
-- IPFS developers for creating a robust decentralized storage protocol
-
-## 📞 Contact & Support
-
-- **Repository:** [GitHub](https://github.com/AnirudhDattu/BioSecure-Biometric_Authentication_Framework_over_IPFS)
-- **Issues:** [Report a bug](https://github.com/AnirudhDattu/BioSecure-Biometric_Authentication_Framework_over_IPFS/issues)
-- **Discussions:** [Start a discussion](https://github.com/AnirudhDattu/BioSecure-Biometric_Authentication_Framework_over_IPFS/discussions)
-
-## 🔒 Security Considerations
-
-### Data Privacy
-
-- Biometric data is **never** stored in plaintext
-- All data is encrypted before leaving the local system
-- IPFS content identifiers (CIDs) are deterministic but don't reveal data content
-- Environment variables should never be committed to version control
-
-### Best Practices
-
-1. **Key Management:**
-   - Generate strong, random encryption keys
-   - Rotate keys periodically in production
-   - Use hardware security modules (HSMs) for production keys
-
-2. **Access Control:**
-   - Implement rate limiting for enrollment/verification
-   - Add authentication for administrative functions
-   - Monitor access logs for suspicious activity
-
-3. **Network Security:**
-   - Use HTTPS in production deployments
-   - Implement CORS policies appropriately
-   - Consider using VPN for IPFS access in sensitive environments
-
-4. **Regular Updates:**
-   - Keep dependencies updated for security patches
-   - Monitor CVE databases for vulnerability announcements
-   - Test updates in staging before production deployment
-
-## 🚦 Roadmap
-
-### Current Version: 1.0.0
-
-### Planned Features
-
-- [ ] Multi-factor authentication (MFA) support
-- [ ] Mobile application integration
-- [ ] Blockchain-based access logging
-- [ ] Support for additional biometric modalities (iris, fingerprint)
-- [ ] Enhanced admin dashboard with analytics
-- [ ] RESTful API for third-party integrations
-- [ ] Docker containerization
-- [ ] Kubernetes deployment templates
-- [ ] Automated testing suite
-- [ ] Performance benchmarking tools
-
----
 
 **Built with ❤️ for a more secure and decentralized future**
 

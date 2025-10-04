@@ -1,0 +1,52 @@
+from image_encryption import encrypt_image_file, decrypt_image_file
+
+# Encrypt an image file
+encrypt_image_file("input.jpg", "encrypted.npz")
+
+# Decrypt the image file
+decrypt_image_file("encrypted.npz", "decrypted.jpg")
+
+# Alternative usage with more control
+from image_encryption import encrypt_image_pixels, decrypt_image_pixels
+from PIL import Image
+
+img = Image.open("input.jpg")
+encrypted = encrypt_image_pixels(img)
+decrypted = decrypt_image_pixels(*encrypted)
+decrypted.save("decrypted.jpg")
+
+
+
+//OR//
+
+import numpy as np
+from image_encryption import (
+    encrypt_image_pixels,
+    decrypt_image_pixels,
+    save_encrypted_image,
+    load_encrypted_image,
+    visualize_encrypted_image
+)
+
+# Load image
+img = Image.open("input.jpg")
+
+# Encrypt with custom IV
+iv = 123456789  # Should normally be random
+encrypted_data = encrypt_image_pixels(img, iv=iv)
+
+# Save encrypted data
+save_encrypted_image(encrypted_data, "encrypted.npz")
+
+# Visualize encrypted data
+encrypted_img = visualize_encrypted_image(
+    encrypted_data[0],
+    encrypted_data[1],
+    encrypted_data[2]
+)
+encrypted_img.save("encrypted_visualization.jpg")
+
+# Load and decrypt
+loaded_data = load_encrypted_image("encrypted.npz")
+decrypted_img = decrypt_image_pixels(*loaded_data)
+decrypted_img.save("decrypted.jpg")
